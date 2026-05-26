@@ -1,1 +1,3 @@
 rootProject.name = 'base-java-project'
+
+include 'base-app'

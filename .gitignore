@@ -1,62 +1,39 @@
+HELP.md
 .gradle
-**/build/
-!**/src/**/build/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
-
-# Cache of project
-.gradletasknamecache
-
-# Eclipse Gradle plugin generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
+### STS ###
+.apt_generated
 .classpath
-
-# Build output directies
-/target
-*/target
-/build
-*/build
-
-# IntelliJ specific files/directories
-.idea
-*.ipr
-*.iws
-*.iml
-atlassian-ide-plugin.xml
-
-# Eclipse specific files/directories
-.classpath
+.factorypath
 .project
 .settings
-.metadata
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-# Editor Files #
-################
-*~
-*.swp
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-# Logs and databases #
-######################
-*.log
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+### VS Code ###
+.vscode/
+gradlew
+gradlew.bat

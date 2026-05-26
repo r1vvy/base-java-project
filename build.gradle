@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'idea'
+    alias(libs.plugins.spring.boot) apply false
 }
 
 group = 'com.base'
@@ -13,5 +14,14 @@ repositories {
 idea {
     project {
         languageLevel = 25
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    repositories {
+        mavenCentral()
     }
 }
