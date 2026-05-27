@@ -1,5 +1,27 @@
+plugins {
+    alias(libs.plugins.spring.boot) apply true
+}
+
 dependencies {
+    annotationProcessor(libs.lombok)
+    compileOnly(libs.lombok)
+
+    testAnnotationProcessor(libs.lombok)
+    testCompileOnly(libs.lombok)
+
     implementation(
-            libs.spring.boot.starter
+            libs.spring.boot.starter.webflux,
+            libs.spring.boot.starter.actuator,
+            libs.slf4j.api,
+            libs.logback.classic
     )
+
+    testImplementation(
+            libs.spring.boot.starter.test,
+            libs.spring.boot.starter.webflux
+    )
+}
+
+springBoot {
+    buildInfo()
 }

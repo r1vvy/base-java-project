@@ -1,3 +1,22 @@
 spring:
   application:
     name: "base-spring-application"
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health,info,metrics
+      path-mapping:
+        health: health
+        info: info
+        metrics: metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.base: DEBUG
+  config: classpath:logback.xml

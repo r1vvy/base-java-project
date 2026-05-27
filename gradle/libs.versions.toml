@@ -1,8 +1,21 @@
+# @todo: Add opentelemetry observation with prometheus, grafana tempo and loki
+
+
 [versions]
 springBoot = "4.0.6"
+slf4jApi = "2.0.9"
+logback = "1.5.13"
+lombok = "1.18.44"
 
 [plugins]
 spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
 
 [libraries]
-spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springBoot" }
+spring-boot-starter-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux", version.ref = "springBoot" }
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "springBoot" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springBoot" }
+
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4jApi" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
